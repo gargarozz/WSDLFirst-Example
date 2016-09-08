@@ -18,9 +18,8 @@ public class WSClient {
         client = service.getHelloPort();
         bp = (BindingProvider) client;
         bp.getRequestContext().put(
-                BindingProvider.ENDPOINT_ADDRESS_PROPERTY, );
-
-
+                BindingProvider.ENDPOINT_ADDRESS_PROPERTY, "http://localhost:8080/SayHello");
+        System.out.println(client.sayHello("Hi!"));
 
     }
 }
